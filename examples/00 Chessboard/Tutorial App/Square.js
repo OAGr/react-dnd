@@ -8,13 +8,12 @@ export default class Square extends Component {
 
   render() {
     const { black } = this.props;
-    const backgroundColor = black ? 'black' : 'white';
     const color = black ? 'white' : 'black';
+    let classes = 'Square'
+    classes += black ? ' Black' : '';
 
     return (
-      <div style={{
-        color,
-        backgroundColor,
+      <div className={classes} style={{
         width: '100%',
         height: '100%'
       }}>
